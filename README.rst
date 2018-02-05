@@ -1,6 +1,9 @@
 Rapnet API
 ==========
 
+.. image:: https://badge.fury.io/py/fontmeta.svg
+    :target: https://badge.fury.io/py/fontmeta
+
 An utility and library to get metadata from TTF/OTF fonts.
 
 
