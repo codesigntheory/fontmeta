@@ -1,0 +1,14 @@
+from fontTools.ttLib import TTFont
+
+PLATFORMS = ['Unicode', 'Macintosh', 'ISO [deprecated]', 'Windows', 'Custom']
+
+UNICODE_ENCODINGS = ['Unicode 1.0 semantics', 'Unicode 1.1 semantics',
+                     'Unicode 1.1 semantics',
+                     'Unicode 2.0 and onwards semantics, Unicode BMP only (cmap subtable formats 0, 4, 6).',
+                     'Unicode 2.0 and onwards semantics, Unicode full repertoire (cmap subtable formats 0, 4, 6, 10, 12).',
+                     'Unicode Variation Sequences (cmap subtable format 14).',
+                     'Unicode Variation Sequences (cmap subtable format 14).']
+
+WINDOWS_ENCODINGS = ['Symbol', 'Unicode BMP(UCS-2)', 'ShiftJIS', 'PRC',
+                     'Big5', 'Wansung', 'Johab', 'Reserved', 'Reserved',
+                     'Reserved', 'Unicode UCS-4']

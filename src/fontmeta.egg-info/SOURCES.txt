@@ -1,0 +1,9 @@
+README.rst
+setup.py
+src/fontmeta.py
+src/fontmeta.egg-info/PKG-INFO
+src/fontmeta.egg-info/SOURCES.txt
+src/fontmeta.egg-info/dependency_links.txt
+src/fontmeta.egg-info/entry_points.txt
+src/fontmeta.egg-info/requires.txt
+src/fontmeta.egg-info/top_level.txt
