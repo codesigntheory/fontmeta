@@ -5,7 +5,7 @@ from fontTools.ttLib import TTFont
 
 __author__ = "Utsob Roy"
 __license__ = "MIT"
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __maintainer__ = "Utsob Roy"
 __email__ = "roy@codesign.com.bd"
 __status__ = "Production"
@@ -485,8 +485,8 @@ class FontMeta:
 
             field = NAME_TABLE.get(nti.nameID, False)
             if not field:
-                if 23 <= nti.nameID <= 255:
-                    field = 'Reserved for future expansion.'
+                if 26 <= nti.nameID <= 255:
+                    field = 'Reserved [{}]'.format(nti.nameID)
                 elif 256 <= nti.nameID:
                     field = 'Font Specific[{}]'.format(nti.nameID)
 
