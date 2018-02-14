@@ -467,8 +467,10 @@ class FontMeta:
                 encoding = {'id': 0, 'value': 'Custom'}
                 language = {'id': 0, 'value': 'Custom'}
             else:
-                encoding = {'id': nti.platEncID, 'value': platform_data['encodings'][nti.platEncID]}
-                language = {'id': nti.langID, 'value': platform_data['languages'][nti.langID]}
+                encoding = {'id': nti.platEncID,
+                            'value': platform_data['encodings'].get(nti.platEncID, "Unknown")}
+                language = {'id': nti.langID,
+                            'value': platform_data['languages'].get(nti.langID, "Unknown")}
             if b'\x00' in nti.string:
                 name_str = nti.string.decode('utf-16-be')
             else:
@@ -516,14 +518,14 @@ def main():
         try:
             try:
                 f = FontMeta(font)
+                try:
+                    data = f.get_data()
+                    for key in data:
+                        print("{}: {}".format(key, data[key]))
+                except RuntimeError:
+                    print("Something is wrong. Ask the goddamn developer.")
             except IOError:
                 print("Can't get the file.")
-            try:
-                data = f.get_data()
-                for key in data:
-                    print("{}: {}".format(key, data[key]))
-            except RuntimeError:
-                print("Something is wrong. Ask the goddamn developer.")
         except RuntimeError:
             print("Something is wrong. Ask the goddamn developer.")
 
