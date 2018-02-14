@@ -8,7 +8,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='fontmeta',
-    version='1.4.0',
+    version='1.6.0',
     description='An Utility to get ttf/otf font metadata',
     long_description=long_description,
     url='https://github.com/codesigntheory/fontmeta',

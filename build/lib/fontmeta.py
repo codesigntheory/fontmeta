@@ -471,20 +471,7 @@ class FontMeta:
                             'value': platform_data['encodings'].get(nti.platEncID, "Unknown")}
                 language = {'id': nti.langID,
                             'value': platform_data['languages'].get(nti.langID, "Unknown")}
-            if b'\x00' in nti.string:
-                name_str = nti.string.decode('utf-16-be')
-            else:
-                try:
-                    enc = ENCODINGS.get(encoding['value'], False)
-                    if enc:
-                        name_str = nti.string.decode(enc)
-                    else:
-                        name_str = nti.string.decode('utf-8')
-                except UnicodeDecodeError:
-                    print(encoding)
-                    print(language)
-                    print(nti.string)
-
+            name_str = nti.toStr()
             field = NAME_TABLE.get(nti.nameID, False)
             if not field:
                 if 26 <= nti.nameID <= 255:
