@@ -1,4 +1,8 @@
-Rapnet API
+Warning!!!
+======
+This repo is moved to https://gitlab.com/codesigntheory/fontmeta
+
+FontMeta
 ==========
 
 .. image:: https://badge.fury.io/py/fontmeta.svg
